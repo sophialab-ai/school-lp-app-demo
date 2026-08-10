@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="見込み客の迷いを整理し、相談前の意思決定を支えるLP型アプリの体験版です。">
+    <meta name="theme-color" content="#f7f4ec">
+    <title>LP型アプリで、相談前をデザインする。</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+
+    <main class="app-shell" id="app">
+      <header class="app-header">
+        <a class="brand" href="#" data-action="restart" aria-label="最初の画面へ戻る">
+          <span class="brand__mark" aria-hidden="true">◌</span>
+          <span>相談前デザイン</span>
+        </a>
+        <span class="role-chip" id="role-chip">スクール運営者</span>
+      </header>
+
+      <div class="progress-wrap" id="progress-wrap" hidden>
+        <div class="progress-meta">
+          <span id="progress-label">体験の進み具合</span>
+          <span id="progress-count">体験中</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="体験の進み具合" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1">
+          <span id="progress-bar"></span>
+        </div>
+      </div>
+
+      <section class="screen" id="screen" aria-live="polite" aria-atomic="true"></section>
+
+      <nav class="screen-nav" id="screen-nav" aria-label="画面操作">
+        <button class="back-button" id="back-button" type="button" data-action="back">
+          <span aria-hidden="true">←</span> 戻る
+        </button>
+      </nav>
+    </main>
+
+    <noscript>この体験にはJavaScriptが必要です。ブラウザの設定でJavaScriptを有効にしてください。</noscript>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
